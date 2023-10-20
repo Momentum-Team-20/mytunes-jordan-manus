@@ -1,0 +1,86 @@
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1,
+h3,
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* styles audio display */
+
+
+
+/* styles the search results section */
+.searchResults {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.music {
+    width: 20vw;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.artistName {
+    height: 75px;
+    overflow: hidden;
+}
+
+/* centers song and artist name */
+.songName,
+.artistName {
+    text-align: center;
+}
+
+
+/* styles the play button image */
+.imageContainer {
+    /* position: relative; */
+    display: flex;
+    width: 50%vw;
+    margin-left: 60px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    width: 100%;
+}
+
+.playButton {
+    transition: .5s ease;
+    opacity: 1;
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -30%);
+    /* -ms-transform: translate(-50%, -50%); */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* color: black;
+    border: 10px solid palevioletred; */
+}
+
+.imageContainer:hover .image {
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.imageContainer:hover .playButton {
+    opacity: 1;
+    z-index: 5;
+}

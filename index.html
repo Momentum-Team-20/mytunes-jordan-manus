@@ -6,35 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <script src="main.js" defer></script>
+  <link rel="icon" href="musicNote.png" sizes="96x96" type="image/png">
   <title>Music Search</title>
 </head>
 
 <body>
 
-  <div class="search-bar">
+  <!-- playback area -->
+  <section class="audioSection">
+    <audio controls auto class="audioPlayer">
+
+    </audio>
+  </section>
+
+  <!-- search bar and radio buttons -->
+  <section class="search-bar">
     <h2>Itunes Search</h2>
-    <!-- <form method="post" id="userInput" name="userIput"> -->
-    <div class="artistInput">
-      <input type="text" class="userInput" placeholder="Enter Artist Here" required>
-    </div>
+    <form method="post" id="searchForm" class="userInput">
 
-    <div class="mediaSelector">
-      <input type="radio" name="radioButton" id="music" value="musicArtist">
-      <label for="music">Music</label>
-      <input type="radio" name="radioButton" id="musicVideo" value="musicVideo">
-      <label for="musicVideo">Music Video</label>
-      <input type="radio" name="radioButton" id="podcast" value="podcast">
-      <label for="podcast">Podcast</label>
-    </div>
+      <div class="artistInput">
+        <input type="text" id="userInput" placeholder="Enter Artist Here" required>
+      </div>
 
-    <button class="searchButton" type="submit">Submit</button>
+      <div class="mediaSelector">
+        <input type="radio" name="radioButton" id="music" value="musicArtist" checked="checked">
+        <label for="music">Music</label>
+        <input type="radio" name="radioButton" id="musicVideo" value="musicVideo">
+        <label for="musicVideo">Music Video</label>
+        <input type="radio" name="radioButton" id="podcast" value="podcast">
+        <label for="podcast">Podcast</label>
+      </div>
 
-    <!-- </form> -->
+      <button class="searchButton" type="submit">Submit</button>
+
+    </form>
+  </section>
+
+  <!-- results of search section -->
+  <section class="results">
     <h2>Search Results</h2>
     <div class="searchResults">
 
     </div>
-  </div>
+  </section>
 
 </body>
 
